@@ -1,43 +1,56 @@
-/* Assignment 04: Finishing a Todo List App
- *
- * 
- *
- */
+let todos = [];
 
+function addTodo() {
+  const todoInput = document.getElementById('todoInput');
+  const todoText = todoInput.value.trim();
 
-//
-// Variables
-//
+  if (todoText !== '') {
+    const newTodo = {
+      id: todos.length + 1,
+      text: todoText,
+      completed: false,
+    };
 
-// Constants
-const appID = "app";
-const headingText = "To do. To done. ✅";
-
-// DOM Elements
-let appContainer = document.getElementById(appID);
-
-//
-// Functions
-//
-
-// Add a heading to the app container
-function inititialise() {
-  // If anything is wrong with the app container then end
-  if (!appContainer) {
-    console.error("Error: Could not find app contianer");
-    return;
+    todos.push(newTodo);
+    todoInput.value = '';
+    renderTodos();
   }
-
-  // Create an h1 and add it to our app
-  const h1 = document.createElement("h1");
-  h1.innerText = headingText;
-  appContainer.appendChild(h1);
-
-  // Init complete
-  console.log("App successfully initialised");
 }
 
-//
-// Inits & Event Listeners
-//
-inititialise();
+function toggleTodoStatus(id) {
+  const todoIndex = todos.findIndex(todo => todo.id === id);
+  todos[todoIndex].completed = !todos[todoIndex].completed;
+  renderTodos();
+}
+
+function deleteTodo(id) {
+  todos = todos.filter(todo => todo.id !== id);
+  renderTodos();
+}
+
+function renderTodos() {
+  const todoList = document.getElementById('todoList');
+  const emptyState = document.getElementById('emptyState');
+
+  todoList.innerHTML = '';
+
+  if (todos.length === 0) {
+    emptyState.style.display = 'block';
+  } else {
+    emptyState.style.display = 'none';
+    todos.forEach(todo => {
+      const listItem = document.createElement('li');
+      listItem.innerHTML = `
+        <span class="${todo.completed ? 'completed' : ''}">${todo.text}</span>
+        <div>
+          <button onclick="toggleTodoStatus(${todo.id})">Done</button>
+          <button onclick="deleteTodo(${todo.id})">Delete</button>
+        </div>
+      `;
+      todoList.appendChild(listItem);
+    });
+  }
+}
+
+// Initial rendering
+renderTodos();
