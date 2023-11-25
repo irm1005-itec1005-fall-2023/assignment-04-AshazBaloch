@@ -24,6 +24,7 @@ Todo lists are like a "right of passage" in webdev tutorials. A simple Todo list
 
 Your Assignment 04 involves building and shipping an awesome and innovative Todo list app, as well as doing a basic code review on a team member's submission.
 
+
 Students will also be assessed on their ability to commit their code to GitHub and activate the GitHub pages service.
 
 

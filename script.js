@@ -34,6 +34,7 @@ function renderTodos() {
 
   todoList.innerHTML = '';
 
+  
   if (todos.length === 0) {
     emptyState.style.display = 'block';
   } else {
