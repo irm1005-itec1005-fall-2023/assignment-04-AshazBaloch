@@ -44,8 +44,9 @@ function renderTodos() {
       listItem.innerHTML = `
         <span class="${todo.completed ? 'completed' : ''}">${todo.text}</span>
         <div>
-          <button onclick="toggleTodoStatus(${todo.id})">Done</button>
-          <button onclick="deleteTodo(${todo.id})">Delete</button>
+          <button onclick="deleteTodo(${todo.id})" class="Done-button">Done</button>
+          <button onclick="deleteTodo(${todo.id})" class="Delete-button">Delete</button>
+
         </div>
       `;
       todoList.appendChild(listItem);

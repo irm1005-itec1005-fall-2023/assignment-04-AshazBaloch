@@ -5,7 +5,7 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
-}
+  background-image: url('images/bg.jpg');}
 
 .container {
   text-align: center;
@@ -16,42 +16,10 @@ body {
   background-color: #fff;
   border-radius: 10px;
   position: relative;
-  border: 16px solid #000;
+  border: 16px solid #000000;
   border-top-width: 60px;
   border-bottom-width: 80px; /* Adjust to make the bottom thicker */
-  overflow: hidden; /* Ensures the circle doesn't overflow */
-}
 
-.notch {
-  width: 40px;
-  height: 20px;
-  background-color: #000;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 0 0 10px 10px;
-}
-
-
-.circle {
-  width: 60px;
-  height: 60px;
-  background-color: #ccc;
-  position: absolute;
-  bottom: 0; /* Position it at the bottom */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid #666; /* Add a border to make it look like a button */
-  border-radius: 50%;
-}
-
-.circle::before {
-  content: '\1F3E0'; /* Unicode character for home */
-  font-size: 30px;
 }
 
 h1 {
@@ -72,14 +40,15 @@ input {
 }
 
 button {
-  padding: 8px 15px;
-  background-color: #4CAF50;
+  padding: 8px 25px;
+  background-color: #2e00fb;
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: calc(90% - 3px); /* Adjusted width to avoid overlapping */
+  
   margin-right: 5px; /* Added margin between buttons */
+  margin-top: 10px;
 }
 
 ul {
@@ -103,3 +72,27 @@ li {
   color: #777;
 }
 
+.Delete-button {
+  background-color: #ff0000; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.Done-button {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
