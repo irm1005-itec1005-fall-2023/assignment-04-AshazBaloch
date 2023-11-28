@@ -1,3 +1,4 @@
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-7f7980b617ed060a017424585567c406b6ee15c891e84e1186181d67ecf80aa0.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=13001340)
 # Assignment 04
 
 **Course Title**: Web Development
@@ -22,6 +23,7 @@
 Todo lists are like a "right of passage" in webdev tutorials. A simple Todo list can be written in a couple dozen lines of code. There is, however, a huge opportunity for innovation, enhancements and features that can take this project from a learning opportunity to a showcase you put on a portfolio. 
 
 Your Assignment 04 involves building and shipping an awesome and innovative Todo list app, as well as doing a basic code review on a team member's submission.
+
 
 Students will also be assessed on their ability to commit their code to GitHub and activate the GitHub pages service.
 
